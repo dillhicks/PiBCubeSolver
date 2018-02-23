@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as npimg
 
-
-def getFace(img,face,pixel):
+# face: 0- left side of picture. 1- right side of picture
+def getFace(img,face,pixel,array):
     array = numpy.zeros(shape=(3,3))
     if face ==  0:
         array[0][0] = getColor(img,pixel[0])
@@ -28,6 +28,20 @@ def getFace(img,face,pixel):
         array[2][1] = getColor(img,pixel[16])
         array[2][2] = getColor(img,pixel[17])
     return array
-           
-        
+// Orientation of Master Rubix Cube Array containing faces           
+def getOrientation(face,array):
+    if face[1][1] == 'White':
+        array[0] = face;
+    else if face[1][1] == 'Green':
+        array[1] = face;
+    else if face[1][1] == 'Orange':
+        array[2] = face;
+    else if face[1][1] == 'Blue':
+        array[3] = face;
+    else if face[1][1] == 'Red':
+        array[4] = face;
+    else if face[1][1] === 'Yellow':
+        array[5] = face;
+    return array;
+
 
