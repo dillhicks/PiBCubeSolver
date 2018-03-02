@@ -1,229 +1,472 @@
-def bluepiece( blue[3][3], orange[3][3], green[3][3], red[3][3], yellow[3][3], white[3][3] ):
+import faceRotation
+
+
+def bluepiece():
     #if piece is on the bottom layer
-    for i in 3:
-        if blue[3][i] == "b":
-            for j in 3:
-                if yellow[j][1] == "w":
-                    #turn Fi twice
-                    return true
-        if orange[3][i] == "b"and yellow[1][i] == "w":
-            #turn Di once, turn Fi twice
-            return true
-        if green[3][i] == "b":
-            for j in 3:
-                    #turn Di twice, turn Fi twice
-                    return true
-        if red[3][i] == "b" and yellow[3][i] == "w":
-            #turn D once, turn Fi twice
+        #blue face
+    if left[3][2] == "b" and bottom[2][1] == "w":
+        return true
+    if left[3][2] == "w" and bottom[2][1] == "b":
+        rotateCCLeft()
+        rotateCCFront()
+        rotateCCBottom()
+        return true
+        #red face
+    if front[3][2] == "b" and bottom[1][2] == "w":
+        rotateCCBottom()
+    if front[3][2] == "b" and bottom[1][2] == "w":
+        rotateFront()
+        rotateLeft()
+        return true
+        #green face
+    if right[3][2] == "b" and bottom[2][3] == "w":
+        rotateBottom()
+        rotateBottom()
+        return true
+    if right[3][2] == "w" and bottom[2][3] == "b":
+        rotateCCRight()
+        rotateFront()
+        rotateCCBottom()
+        return true
+        #orange face
+    if back[1][2] == "b" and bottom[3][2] == "w":
+        rotateBottom()
+        return true
+    if back[1][2] == "w" and bottom[3][2] == "b":
+        rotateBottom()
+        rotateCCLeft()
+        rotateCCFront()
+        rotateCCBottom()
+        return true
             
     #if piece is on the second layer
-    if blue[2][1] == "b" and red[2][3] == "w":
-        #turn F once
+    if left[2][3] == "b" and front[2][1] == "w":
+        rotateLeft()
         return true
-    if blue[2][1] == "w" and red[2][3] == "b":
-        #turn Li once, Ui once
+    if left[2][3] == "w" and front[2][1] == "b":
+        rotateCCFront()
+        rotateCCBottom()
         return true
-    
-    if blue[2][3] == "b" and orange[2][1] == "w":
-        #turn Fi once
+    if front[2][3] == "b" and right[2][1] == "w":
+        rotateRight()
+        rotateCCBottom()
         return true
-    if blue[2][3] == "w" and orange[2][1] == "b":
-        #turn R once, U one
+    if front[2][3] == "w" and right[2][1] == "b":
+        rotateFront()
+        rotateCCBottom()
         return true
-    
-    if green[2][1] == "b" and orange[2][3] == "w":
-        #turn B once, U twice
+    if back[2][1] == "b" and left[2][1] == "w":
+        rotateCCBack()
+        rotateBottom()
         return true
-    if green[2][1] == "w" and orange[2][3] == "b":
-        #turn Ri once, U once
+    if back[2][1] == "w" and left[2][1] == "b":
+        rotateCCLeft()
         return true
-    
-    if green[2][3] == "b" and red[2][1] == "w":
-        #turn L once, Ui once
+    if right[2][3] == "b" and back[2][3] == "w":
+        rotateRight()
+        rotateBottom()
+        rotateBottom()
         return true
-    if green[2][3] == "b" and red[2][1] == "w":
-        #turn Bi once, U twice
+    if right[2][3] == "w" and back[2][3] == "b":   
+        rotateBack()
+        rotateBottom() 
         return true
-    
-    #if piece is in top layer
-    for i in 3 and j in 3:
-        if white[i][j] == "w":
-            if blue[1][2] == "b":
-                return true
-            if orange[1][2] == "b":
-                #turn U once
-                return true
-            if green[1][2] == "b":
-                #turn U twice
-                return true
-            if red[1][2] == "b":
-                #turn Ui once
-                return true
 
-def orangepiece( blue[3][3], orange[3][3], green[3][3], red[3][3], yellow[3][3], white[3][3] )
-    #if piece is in bottom layer
-    for i in 3:
-        if orange[3][i] == "o"and yellow[1][i] == "w":
-            #turn R twice
-            return true
-        if blue[3][i] == "o":
-            for j in 3:
-                if yellow[j][1] == "w":
-                    #turn D once, R twice
-                    return true
-        if green[3][i] == "o":
-            for j in 3:
-                    #turn B once, turn Ri once
-                    return true
-        if red[3][i] == "o" and yellow[3][i] == "w":`
-            #turn Di once, turn R twice
-    
-    #if piece is on the second layer
-    if blue[2][1] == "o" and red[2][3] == "w":
-        #turn F once, D once, Fi once, R three times
-        return true
-    if blue[2][1] == "w" and red[2][3] == "o":
-        #turn R once
-        return true
-    
-    if blue[2][3] == "o" and orange[2][1] == "w":
-        #turn L once, D twice, R twice
-        return true
-    if blue[2][3] == "w" and orange[2][1] == "o":
-        #turn Li twice, Di twice, R once
-        return true
-    
-    if green[2][1] == "o" and orange[2][3] == "w":
-        #turn B once, U twice
-        return true
-    if green[2][1] == "w" and orange[2][3] == "o":
-        #turn Ri once, U once
-        return true
-    
-    if green[2][3] == "w" and red[2][1] == "o":
-        #turn L once, Ui once
-        return true
-    if green[2][3] == "o" and red[2][1] == "w":
-        #turn Bi once, U twice
-        return true
-                
     #if piece is in top layer
-    for i in 3 and j in 3:
-        if white[i][j] == "w":
-            if orange[1][2] == "o":
-                return true
-            if green[1][2] == "o":
-                #turn B twice, Di once, R twice
-                return true
-            if red[1][2] == "b":
-                #turn Li twice, D twice, R twice
-                return true
+    if top[1][2] == "w" and back[3][2] == "b":
+        rotateCCTop()
+        rotateLeft()
+        rotateLeft()
+        return true
+    if top[2][1] == "w" and left[1][2] == "b":
+        rotateLeft()
+        rotateLeft()
+        return true
+    if top[3][2] == "w" and front[1][2] == "b":
+        rotateTop()
+        rotateLeft()
+        rotateLeft()
+        return true
+    if top[2][3] == "w" and right[1][2] == "b":
+        rotateTop()
+        rotateTop()
+        rotateLeft()
+        rotateLeft()
+        return true
+        #second orientation
+    if top[1][2] == "b" and back[3][2] == "w":
+        rotateCCBack()
+        rotateCCLeft()
+        return true
+    if top[2][1] == "b" and left[1][2] == "w":
+        rotateCCTop()
+        rotateCCBack()
+        rotateCCLeft()
+    if top[3][2] == "b" and front[1][2] == "w":
+        rotateCCTop()
+        rotateCCTop()
+        rotateCCBack()
+        rotateCCLeft()
+    if top[2][3] == "b" and right[1][2] == "w":
+        rotateCCFront()
+        rotateLeft()
 
-def greenpiece( blue[3][3], orange[3][3], green[3][3], red[3][3], yellow[3][3], white[3][3] )
-    #if piece is in the bottom layer
-     for i in 3:
-        if green[3][i] == "g" and yellow[1][i] == "w":
-            #turn B twice
-            return true
-        if orange[3][i] == "g" and yellow[1][i] == "w":
-            #turn D once, B twice
-            return true
-        if blue[3][i] == "g" and yellow[i][1] == "w":
-            #turn D twice, turn B twice
-            return true
-        if red[3][i] == "g" and yellow[i][3]:`
-            #turn Di once, turn R twice
-            return true
-        
-    #second layer
-    if blue[2][1] == "g" and red[2][3] == "w":
-        #Fi once, Di twice, F once, B twice
+bluepiece()
+
+def redpiece()
+    #if the piece is at the bottom layer
+        #red face
+    if front[3][2] == "r" and bottom[1][2] == "w":
         return true
-    if blue[2][1] == "w" and red[2][3] == "g":
-        #turn L once, Di once, Li once, B twice
+    if front[3][2] == "w" and bottom[1][2] == "r":
+        rotateCCFront()
+        rotateRight()
+        rotateCCTop()
+        rotateFront()
+        rotateFront()
         return true
-    if blue[2][3] == "g" and orange[2][1] == "w":
-        #turn F twice, D twice, Fi once, B twice
+        #green face
+    if left[3][2] == "r" and bottom[2][3] == "w":
+        rotateRight()
+        rotateRight()
+        rotateCCTop()
+        rotateFront()
+        rotateFront()
         return true
-    if blue[2][3] == "w" and orange[2][1] == "g":
-        #turn Ri once, D once, R once, B twice
+    if left[3][2] == "w" and bottom[2][3] == "r":
+        rotateRight()
+        rotateCCFront()
         return true
-    if green[2][1] == "g" and orange[2][3] == "w":
-        #turn Bi once
+        #orange face
+    if back[1][2] == "r" and bottom[3][2] == "w":
+        rotateCCBack()
+        rotateCCBack()
+        rotateTop()
+        rotateTop()
+        rotateFront()
+        rotateFront()
         return true
-    if green[2][1] == "w" and orange[2][3] == "g":
-        #turn R once, D once, Ri once, B twice
+    if back[1][2] == "w" and bottom[3][2] == "r":
+        rotateCCBack()
+        rotateRight()
+        rotateRight()
+        rotateCCTop()
+        rotateCCFront()
+        rotateCCFRont()
         return true
-    if green[2][3] == "w" and red[2][1] == "g":
-        #turn L once, Di once, Li once, B twice
+    #if in second layer
+    if front[2][1] == "r" and left[2][3] == "w":
+        rotateCCFront()
         return true
-    if green[2][3] == "g" and red[2][1] == "w":
-        #turn B once
+    if front[2][1] == "w" and left[2][3] == "r":
+        rotateLeft()
+        rotateTop()
+        rotateFront()
+        rotateFront()
         return true
+    if front[2][3] == "r" and right[2][1] == "w":
+        rotateFront()
+        return true
+    if front[2][3] == "w" and right[2][1] == "r":
+        rotateRight()
+        rotateCCTop()
+        rotateFront()
+        rotateFront()
+        return true
+    if back[2][1] == "r" and left[2][1] == "w":
+        rotateBack()
+        rotateTop()
+        rotateCCRight()
+        rotateFront()
+        return true
+    if back[2][1] == "w" and left[2][1] == "r":
+        rotateBack()
+        rotateTop()
+        rotateTop()
+        rotateFront()
+        rotateFront()
+        return true
+    if back[2][3] == "r" and right[2][3] == "w":
+        rotateRight()
+        rotateRight()
+        rotateFront()
+        return true
+    if back[2][3] == "w" and right[2][3] == "r":
+        rotateRight()
+        rotateCCTop()
+        rotateFront()
+        rotateFront()
+        return true
+    #if in top layer
+    if front[1][2] == "r" and top[3][2] == "w":
+        rotateFront()
+        rotateFront()
+        return true
+    if front[1][2] == "w" and top[3][2] == "r":
+        rotateTop()
+        rotateRight()
+        rotateFront()
+        return true
+    if top[2][1] == "w" and left[1][2] == "r":
+        rotateTop()
+        rotateFront()
+        rotateFront()
+        return true
+    if top[2][1] == "r" and left[1][2] == "w":
+        rotateTop()
+        rotateTop()
+        rotateRight()
+        rotateFront()
+        return true
+    if top[1][2] == "w" and back[3][2] == "r":
+        rotateTop()
+        rotateTop()
+        rotateFront()
+        rotateFront()
+        return true
+    if top[1][2] == "r" and back[3][2] == "w":
+        rotateFront()
+        rotateRight()
+        rotateFront()
+        return true
+    if top[2][3] == "w" and right[1][2] == "r":
+        rotateCCTop()
+        rotateFront()
+        rotateFront()
+        return true
+    if top[2][3] == "r" and right[1][2] == "w":
+        rotateRight()
+        rotateFront()
+        return true
+redpiece()
+
+def orangepiece()
+    #if at bottom layer
+    if back[1][2] == "o" and bottom[3][2] == "w":
+        return true
+    if back[1][2] == "w" and bottom[3][2] == "o":
+        rotateCCBack()
+        rotateRight()
+        rotateTop()
+        rotateBack()
+        rotateBack()
+        return true
+    if right[3][2] == "o" and bottom[2][3] == "w":
+        rotateRight()
+        rotateRight()
+        rotateTop()
+        rotateBack()
+        rotateBack()
+        return true
+    if right[3][2] == "o" and bottom[2][3] == "w":
+        rotateCCRight()
+        rotateBack()
+        return true
+    #if second layer
+    if front[2][1] == "o" and left[2][3] == "w":
+        rotateRight()
+        rotateRight()
+        rotateBack()
+        return true
+    if front[2][1] == "w" and left[2][3] == "o":
+        rotateRight()
+        rotateTop()
+        rotateBack()
+        rotateBack()
+        return true
+    if front[2][3] == "o" and right[2][1] == "w":
+        rotateLeft()
+        rotateCCTop()
+        rotateCCTop()
+        rotateCCLeft()
+        rotateRight()
+        rotateBack()
+        return true
+    if front[2][3] == "w" and right[2][1] == "o":
+        rotateLeft()
+        rotateCCTop()
+        rotateBack()
+        rotateBack()
+        return true
+    if back[2][1] == "o" and left[2][1] == "w":
+        rotateCCBack()
+        return true
+    if back[2][1] == "w" and left[2][1] == "o":
+        rotateCCRight()
+        rotateTop()
+        rotateBack()
+        rotateBack()
+        return true
+    if back[2][3] == "o" and right[2][3] == "w":
+        rotateBack()
+        return true
+    if back[2][3] == "w" and right[2][3] == "o":
+        rotateCCRight()
+        rotateTop()
+        rotateBack()
+        rotateBack()
+        return true
+    #if top layer
+    if front[1][2] == "o" and top[3][2] == "w":
+        rotateTop()
+        rotateTop()
+        rotateBack()
+        rotateBack()
+        return true
+    if front[1][2] == "w" and top[3][2] == "o":
+        rotateTop()
+        rotateRight()
+        rotateBack()
+        return true
+    if top[2][1] == "w" and left[1][2] == "r":
+        rotateTop()
+        rotateTop()
+        rotateRight()
+        rotateBack()
+        return true
+    if top[2][1] == "o" and left[1][2] == "w":
+        rotateRight()
+        rotateBack()
+        return true
+    if top[1][2] == "w" and back[3][2] == "o":
+        rotateBack()
+        rotateBack()
+        return true
+    if top[1][2] == "o" and back[3][2] == "w":
+        rotateTop()
+        rotateRight()
+        rotateBack()
+        return true
+    if top[2][3] == "w" and right[1][2] == "o":
+        rotateTop()
+        rotateBack()
+        rotateBack()
+        return true
+    if top[2][3] == "o" and right[1][2] == "w":
+        rotateTop()
+        rotateTop()
+        rotateRight()
+        rotateBack()
+        return true
+
+orangepiece()
+
+def greenpiece()
+    #if bottom layer
+    if bottom[2][3] == "w" and left[3][2] == "g":
+        return true
+    if bottom[2][3] == "g" and left[3][2] == "w":
+        rotateRight()
+        rotateCCFront()
+        rotateTop()
+        rotateFront()
+        rotateCCRight()
+        return true
+    #if second layer
+    if front[2][1] == "g" and left[2][3] == "w":
+        rotateCCFront()
+        rotateTop()
+        rotateFront()
+        rotateRight()
+        rotateRight()
+        return true
+    if front[2][1] == "w" and left[2][3] == "g":
+        rotateCCLeft()
+        rotateTop()
+        rotateTop()
+        rotateLeft()
+        rotateRight()
+        rotateRight()
+        return true
+    if front[2][3] == "g" and right[2][1] == "w":
+        rotateRight()
+        rotateTop()
+        rotateBack()
+        rotateRight()
+        rotateCCBack()
+        return true
+    if front[2][3] == "w" and right[2][1] == "g":
+        rotateCCRight()
+        return true
+    if back[2][1] == "g" and left[2][1] == "w":
+        rotateBack()
+        rotateCCTop()
+        rotateRight()
+        rotateRight()
+        rotateCCBack()
+        return true
+    if back[2][1] == "w" and left[2][1] == "g":
+        rotateLeft()
+        rotateTop()
+        rotateTop()
+        rotateCCLeft()
+        rotateRight()
+        rotateRight()
+        return true
+    if back[2][3] == "g" and right[2][3] == "w":
+        rotateBack()
+        rotateCCTop()
+        rotateRight()
+        rotateRight()
+        rotateCCBack()
+        return true
+    if back[2][3] == "w" and right[2][3] == "g":
+        rotateRight()
+        return true
+    #if top layer
+    if front[1][2] == "g" and top[3][2] == "w":
+        rotateTop()
+        rotateRight()
+        rotateRight()
+        return true
+    if front[1][2] == "w" and top[3][2] == "g":
+        rotateFront()
+        rotateCCRight()
+        rotateCCFront()
+        return true
+    if top[2][1] == "w" and left[1][2] == "g":
+        rotateTop()
+        rotateTop()
+        rotateRight()
+        rotateRight()
+        return true
+    if top[2][1] == "g" and left[1][2] == "w":
+        rotateTop()
+        rotateFront()
+        rotateCCRight()
+        rotateCCFront()
+        return true
+    if top[1][2] == "w" and back[3][2] == "g":
+        rotateCCTop()
+        rotateRight()
+        rotateRight()
+        return true
+    if top[1][2] == "g" and back[3][2] == "w":
+        rotateBack()
+        rotateRight()
+        rotateRight()
+        rotateCCBack()
+        return true
+    if top[2][3] == "w" and right[1][2] == "g":
+        rotateRight()
+        rotateRight()
+        return true
+    if top[2][3] == "g" and right[1][2] == "w":
+        rotateCCTop()
+        rotateFront()
+        rotateCCRight()
+        rotateCCFront()
+        return true
+
+
+
+
+
+
+
+
+
+
+
+
     
-    #if piece is in top layer
-    for i in 3 and j in 3:
-        if white[i][j] == "w":
-            if green[1][2] == "g":
-                return true
-            if red[1][2] == "g":
-                #turn Li twice, Di twice, B twice
-                return true
-def redpiece( blue[3][3], orange[3][3], green[3][3], red[3][3], yellow[3][3], white[3][3] )
-    #if piece is in bottom layer
-    for i in 3:
-        if orange[3][i] == "o"and yellow[1][i] == "w":
-            #turn L twice
-            return true
-        if blue[3][i] == "o":
-            for j in 3:
-                if yellow[j][1] == "w":
-                    #turn D once, R twice
-                    return true
-        if green[3][i] == "o":
-            for j in 3:
-                    #turn B once, turn Ri once
-                    return true
-        if red[3][i] == "o" and yellow[3][i] == "w":`
-            #turn Di once, turn R twice
-    
-    #if piece is on the second layer
-    if blue[2][1] == "o" and red[2][3] == "w":
-        #turn F once, D once, Fi once, R three times
-        return true
-    if blue[2][1] == "w" and red[2][3] == "o":
-        #turn R once
-        return true
-    
-    if blue[2][3] == "o" and orange[2][1] == "w":
-        #turn L once, D twice, R twice
-        return true
-    if blue[2][3] == "w" and orange[2][1] == "o":
-        #turn Li twice, Di twice, R once
-        return true
-    
-    if green[2][1] == "o" and orange[2][3] == "w":
-        #turn B once, U twice
-        return true
-    if green[2][1] == "w" and orange[2][3] == "o":
-        #turn Ri once, U once
-        return true
-    
-    if green[2][3] == "w" and red[2][1] == "o":
-        #turn L once, Ui once
-        return true
-    if green[2][3] == "o" and red[2][1] == "w":
-        #turn Bi once, U twice
-        return true
-                
-    #if piece is in top layer
-    for i in 3 and j in 3:
-        if white[i][j] == "w":
-            if orange[1][2] == "o":
-                return true
-            if green[1][2] == "o":
-                #turn B twice, Di once, R twice
-                return true
-            if red[1][2] == "b":
-                #turn Li twice, D twice, R twice
-                return true
