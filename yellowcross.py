@@ -14,7 +14,7 @@ def yellowCross():
 			if i = 2 and j = 2
 				continue
 			if top[i][j] != "y"
-				count++
+				count +=1
 	#if only the center is yellow
 	if count = 8
 		turnalgo()
