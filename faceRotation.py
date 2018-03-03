@@ -17,11 +17,11 @@ global cube1
 
 
 bottom = np.array( [[w,w,w],[w,w,w],[w,w,w]] )
-left = np.array( [[r,g,r],[b,b,b],[b,b,b]] )
-front = np.array( [[g,y,b],[r,r,r],[r,r,r]] )
-back = np.array( [[o,o,o],[o,o,y],[b,g,g]] )
-top = np.array( [[y,y,o],[o,y,o],[y,r,o]] )
-right = np.array( [[y,y,y],[g,g,b],[g,g,g]] )
+left = np.array( [[y,r,r],[y,b,b],[b,b,b]] )
+front = np.array( [[y,g,g],[y,r,b],[r,r,r]] )
+back = np.array( [[o,o,o],[g,o,b],[o,y,b]] )
+top = np.array( [[g,r,y],[g,y,o],[b,o,r]] )
+right = np.array( [[y,y,o],[o,g,r],[g,g,g]] )
 
 cube1 = np.array( [bottom,right,back,left,front,top] )
 
@@ -45,6 +45,8 @@ def rotateClockwise( data ):
    data[0,2] = first
    data[0,1] = second
 
+   
+
 def rotateCounter( data ):
    print "rotating counter-clockwise"
    first = np.array( data[0,0] )
@@ -64,6 +66,7 @@ def rotateCounter( data ):
    data[1,2] = fourth
    data[0,2] = fifth
    data[0,1] = sixth
+
    
 def rotateFront():
    print "rotating front face"
@@ -113,9 +116,12 @@ def rotateBack():
    left_face = np.array( left[:,0] )
 
    top[0,:] = right_face
-   right[:,2] = bottom_face
+   reverse1 = bottom_face[::-1]
+   right[:,2] = reverse1
    bottom[2,:] = left_face
-   left[:,0] = top_face
+   reverse = top_face[::-1]
+   left[:,0] = reverse
+   
 
    rotateClockwise( back )
 
@@ -262,7 +268,7 @@ def rotateBottom():
    return cube1
 
 def rotateCCFront():
-   print "rotating top face" 
+   print "rotating front face" 
    top1 = np.array( top[2,0] )
    top2 = np.array( top[2,1] )
    top3 = np.array( top[2,2] )
@@ -308,9 +314,11 @@ def rotateCCBack():
    bottom_face = np.array( bottom[2,:] )
    left_face = np.array( left[:,0] )
 
-   top[0,:] = left_face
+   reverse = left_face[::-1]
+   top[0,:] = reverse 
    right[:,2] = top_face
-   bottom[2,:] = right_face
+   reverse1 = right_face[::-1]
+   bottom[2,:] = reverse1
    left[:,0] = bottom_face
 
    rotateCounter( back )
@@ -434,6 +442,7 @@ def rotateCCTop():
    left[0,2] = back1
 
    rotateCounter( top )
+   
    tmpCube = np.array( [bottom,right,back,left,front,top] )
    cube1 = tmpCube
    return cube1
