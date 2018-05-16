@@ -5,15 +5,22 @@ import classifycolors as cp
 #rom picamera.array import PiRGBArray
 #from picamera import PiCamera
 
-'''
+
 #function for taking an image when the camera arrives
-def takepicture():
+def takePicture():
 	camera = PiCamera()
-	rawCapture = PiRGBArray(camera)
-	camera.capture(rawCapture, format = "rgb")
-	image = rawCapture.array
+    camera.resolution = (1920,1080)
+    camera.start_preview()
+    sleep(3)
+    camera.stop_preview()
+    with picamera.array.PiRGBArray(camera) as stream:
+        camera.capture(stream, format = "rgb")
+		camera.capture(rawCapture, format = "rgb")
+        image = stream.array
+	cv2.imshow("OpenCV Test", image)
+    cv2.waitkey(0)
+    cv2.destroyAllWindows(0)
 	return image
-'''
 
 def getcolor(img,pixel): 
 	center = img[pixel[0]:pixel[1], pixel[2]:pixel[3]]
@@ -23,12 +30,10 @@ def getcolor(img,pixel):
 	return colorname 
 
 
-
-#1460:1620, 1000:1200  green
-#600:1000, 2200:2600 yellow
-#1800:2400, 1800:2400 red
+takePicture()
+#TODO: setup pixel array
 pixel = [ [1460,1620,1000,1200], [600,1000,2200,2600], [1800,2400,1800,2400] ]
-image = cv2.imread('cornerimg.JPG')
+
 imagec = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 colortest = getcolor(imagec,pixel[2])
 print(colortest)
