@@ -177,3 +177,229 @@ def translate8(string):
         return "b"
     if string == "f":
         return "b'" 
+    
+def translate17( move ):
+	if move == "U":
+		return "F"
+	if move == "D":
+		return "B"
+	if move == "F":
+		return "D"
+	if move == "B":
+		return "U'"
+	if move == "L":
+		return "L"
+	if move == "R":
+		return "R"
+	#counter
+	if move == "U'":
+		return "F'"
+	if move == "D'":
+		return "B'"
+	if move == "F'":
+		return "D'"
+	if move == "B'":
+		return "U'"
+	if move == "L'":
+		return "L'"
+	if move == "R'":
+		return "L'"
+# [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
+#orient18 = np.array([r, g, w, y, b, o])
+def translate18( move ):
+	if move == "U":
+		return "F"
+	if move == "D":
+		return "B"
+	if move == "F":
+		return "R"
+	if move == "B":
+		return "L"
+	if move == "L":
+		return "B"
+	if move == "R":
+		return "U"
+	#counter
+	if move == "U'":
+		return "F'"
+	if move == "D'":
+		return "B'"
+	if move == "F'":
+		return "R'"
+	if move == "B'":
+		return "L'"
+	if move == "L'":
+		return "B'"
+	if move == "R'":
+		return "U'"
+# [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
+#orient19 = np.array([r, y, g, b, w, o])
+def translate19( move ):
+	if move == "U":
+		return "F"
+	if move == "D":
+		return "B"
+	if move == "F":
+		return "U"
+	if move == "B":
+		return "D"
+	if move == "L":
+		return "R"
+	if move == "R":
+		return "L"
+	#counter
+	if move == "U'":
+		return "F'"
+	if move == "D'":
+		return "B'"
+	if move == "F'":
+		return "U'"
+	if move == "B'":
+		return "D'"
+	if move == "L'":
+		return "R'"
+	if move == "R'":
+		return "L'"
+# [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
+#orient20 = np.array([r, b, y, w, g, o])
+def translate20( move ):
+	if move == "U":
+		return "F"
+	if move == "D":
+		return "B"
+	if move == "F":
+		return "L"
+	if move == "B":
+		return "R"
+	if move == "L":
+		return "U"
+	if move == "R":
+		return "D"
+	#counter
+	if move == "U'":
+		return "F'"
+	if move == "D'":
+		return "B'"
+	if move == "F'":
+		return "L'"
+	if move == "B'":
+		return "R'"
+	if move == "L'":
+		return "U'"
+	if move == "R'":
+		return "D'"
+# [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
+#orient21 = np.array([o, b, w, y, g, r])
+def translate21( move ):
+	if move == "U":
+		return "F"
+	if move == "D":
+		return "B"
+	if move == "F":
+		return "L"
+	if move == "B":
+		return "R"
+	if move == "L":
+		return "U"
+	if move == "R":
+		return "D"
+	#counter
+	if move == "U'":
+		return "F'"
+	if move == "D'":
+		return "B'"
+	if move == "F'":
+		return "L'"
+	if move == "B'":
+		return "R'"
+	if move == "L'":
+		return "U'"
+	if move == "R'":
+		return "D'"
+# [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
+#orient22 = np.array([o, y, b, g, w, r])
+def translate22( move ):
+	if move == "U":
+		return "B"
+	if move == "D":
+		return "F"
+	if move == "F":
+		return "U"
+	if move == "B":
+		return "D"
+	if move == "L":
+		return "L"
+	if move == "R":
+		return "R"
+	#counter
+	if move == "U'":
+		return "B'"
+	if move == "D'":
+		return "F'"
+	if move == "F'":
+		return "U'"
+	if move == "B'":
+		return "D'"
+	if move == "L'":
+		return "L'"
+	if move == "R'":
+		return "R'"
+
+# [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
+#orient23 = np.array([o, g, y, w, b, r])
+def translate23( move ):
+	if move == "U":
+		return "B"
+	if move == "D":
+		return "F"
+	if move == "F":
+		return "R"
+	if move == "B":
+		return "L"
+	if move == "L":
+		return "U"
+	if move == "R":
+		return "D"
+	#counter
+	if move == "U'":
+		return "B'"
+	if move == "D'":
+		return "F'"
+	if move == "F'":
+		return "R'"
+	if move == "B'":
+		return "L'"
+	if move == "L'":
+		return "U'"
+	if move == "R'":
+		return "D'"
+
+# [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
+#orient24 = np.array([o, w, g, b, y, r])
+def translate24( move ):
+	if move == "U":
+		return "B"
+	if move == "D":
+		return "F"
+	if move == "F":
+		return "D"
+	if move == "B":
+		return "U"
+	if move == "L":
+		return "R"
+	if move == "R":
+		return "L"
+	#counter
+	if move == "U'":
+		return "B'"
+	if move == "D'":
+		return "F'"
+	if move == "F'":
+		return "D'"
+	if move == "B'":
+		return "U'"
+	if move == "L'":
+		return "L'"
+	if move == "R'":
+		return "R'"
+
