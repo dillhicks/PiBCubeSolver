@@ -1,6 +1,17 @@
-import node 
+class Node:
+    def __init__(self,turn,state=None):
+        self.turn = turn
+        self.state = state
+        self.next = None
 
-class linkedlist:
+    def update(self, state):
+        self.state = state
+    def append(self, nextNode):
+        self.next = nextNode
+    def next(self):
+        return self.next
+
+class linkedList:
     def __init__(self):
         self.head = None
         self.tail = None
@@ -14,13 +25,15 @@ class linkedlist:
             self.tail.append(newNode)
             self.tail = newNode
             self.size += 1
+    def getHead(self):
+        return self.head
 class iterator:
     def __init__(self,List):
-        self.curr = List.head
+        self.curr = List.getHead()
     # Update current Node in iterator if curr.next is not null and return True. 
     def next(self):
-        if curr.next is not None:
-            self.curr = curr.next
+        if self.curr.next is not None:
+            self.curr = self.curr.next
             return True
         else:
             return False

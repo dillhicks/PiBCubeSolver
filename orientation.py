@@ -1,6 +1,6 @@
 import numpy as np
 import linkedList
-import translation
+import translation as tr
 # [0] = top, [1] = front, [2] = left, [3] = right, [4] = back, [5] = bottom
 y = "y"
 r = "r"
@@ -57,13 +57,13 @@ def swapsFront(orient):
     val2 = orient[2]
     val3 = orient[3]
     val4 = orient[4]
-    val4 = orient[5]
+    val5 = orient[5]
     orient[0] = val4
     orient[1] = val0
     orient[2] = val2
     orient[3] = val3
     orient[4] = val5
-    orient[4] = val1
+    orient[5] = val1
 def swapsUp(orient):
     val0 = orient[0]
     val1 = orient[1]
@@ -105,80 +105,81 @@ def updateOrient(orientation,turn):
 def translateMove(instr,orient):
     move = None
     if (orient == orient1).all():
-        move = translate1(instr)
+        move = tr.translate1(instr)
     elif (orient == orient2).all():
-        move = translate2(instr)
+        move = tr.translate2(instr)
     elif (orient == orient3).all():
-        move = translate3(instr)
+        move = tr.translate3(instr)
     elif (orient == orient4).all():
-        move = translate4(instr)
+        move = tr.translate4(instr)
     elif (orient == orient5).all():
-        move = translate5(instr)
+        move = tr.translate5(instr)
     elif (orient == orient6).all():
-        move = translate6(instr)
+        move = tr.translate6(instr)
     elif (orient == orient7).all():
-        move = translate7(instr)
+        move = tr.translate7(instr)
     elif (orient == orient8).all():
-        move = translate8(instr)
+        move = tr.translate8(instr)
     elif (orient == orient9).all():
-        move = translate9(instr)
+        move = tr.translate9(instr)
     elif (orient == orient10).all():
-        move = translate10(instr)
+        move = tr.translate10(instr)
     elif (orient == orient11).all():
-        move = translate11(instr)
+        move = tr.translate11(instr)
     elif (orient == orient12).all():
-        move = translate12(instr)
+        move = tr.translate12(instr)
     elif (orient == orient13).all():
-        move = translate13(instr)
+        move = tr.translate13(instr)
     elif (orient == orient14).all():
-        move = translate14(instr)
+        move = tr.translate14(instr)
     elif (orient == orient15).all():
-        move = translate15(instr)
+        move = tr.translate15(instr)
     elif (orient == orient16).all():
-        move = translate16(instr)
+        move = tr.translate16(instr)
     elif (orient == orient17).all():
-        move = translate17(instr)
+        move = tr.translate17(instr)
     elif (orient == orient18).all():
-        move =  translate18(instr)
+        move = tr.translate18(instr)
     elif (orient == orient19).all():
-        move = translate19(instr)
+        move = tr.translate19(instr)
     elif (orient == orient20).all():
-        move =translate20(instr)
+        move = tr.translate20(instr)
     elif (orient == orient21).all():
-        move = translate21(instr)
+        move = tr.translate21(instr)
     elif (orient == orient22).all():
-        move = translate22(instr)
+        move = tr.translate22(instr)
     elif (orient == orient23).all():
-        move = translate23(instr)
+        move = tr.translate23(instr)
     elif (orient == orient24).all():
-        move = translate24(instr)
+        move = tr.translate24(instr)
     return move
 def translateTurns(turns):
     size = len(turns)
-    linkList = linkedList()
+    linkList = linkedList.linkedList()
     i = 0
-    newNode = None
+    firstState = np.copy(orient1)
+    string = "x"
+    rotation = None
     while i < size:
-        rotation = None
         if i+1 < size:
-            if instr[i+1:i+2] == "'":
+            if turns[i+1:i+2] == "'":
                 rotation = turns[i:i+2]
-                i += 2
+                i += 3
             else:
                 rotation = turns[i:i+1]
-                i += 1
+                i += 2
         else:
             rotation = turns[i:i+1]
-            i += 1
-        newNode = Node(rotation)
+            i += 2
+        newNode = linkedList.Node(rotation,firstState)
+        string += rotation
         linkList.append(newNode)
-    listIter = iterator(linkList)
+    iterator = linkedList.iterator(linkList)
     while 1:
         turn = iterator.getTurn()
         #First state may be uninitialized, must figure out
-        firstState = np.copy(orient1)
-        iterator.updateState(firstState)
         state = iterator.getState()
+        #print(state[0])
         newTurn = translateMove(turn,state)
         iterator.updateTurn(newTurn)
         updateOrient(state,turn)
@@ -187,6 +188,3 @@ def translateTurns(turns):
         else:
             break
     return linkList
-
-        
-
