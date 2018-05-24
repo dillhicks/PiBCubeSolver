@@ -1,183 +1,393 @@
 def translate1(string):
     return string
 def translate2(string):
-    if string == "r":
-        return "f"
-    if string == "r'":
-        return "f'"
-    if string == "l":
-        return "b"
-    if string == "l'":
-        return "b'"
-    if string == "d":
-        return "d"
-    if string == "d'":
-        return "d'"
-    if string == "u":
-        return "u"
-    if string == "u'":
-        return "u'"
-    if string == "f":
-        return "l"
-    if string == "f'":
-        return "l'"
-    if string == "b":
-        return "r"
-    if string == "b'":
-        return "r'"
+    if string == "R":
+        return "F"
+    if string == "R'":
+        return "F'"
+    if string == "L":
+        return "B"
+    if string == "L'":
+        return "B'"
+    if string == "D":
+        return "D"
+    if string == "D'":
+        return "D'"
+    if string == "U":
+        return "U"
+    if string == "U'":
+        return "U'"
+    if string == "F":
+        return "L"
+    if string == "F'":
+        return "L'"
+    if string == "B":
+        return "R"
+    if string == "B'":
+        return "R'"
 
 def translate3(string):
-    if string == "r":
-        return "l"
-    if string == "r'":
-        return "l'"
-    if string == "l":
-        return "r"
-    if string == "l'":
-        return "r'"
-    if string == "d":
-        return "d"
-    if string == "d'":
-        return "d'"
-    if string == "u":
-        return "u"
-    if string == "u'":
-        return "u'"
-    if string == "b":
-        return "f"
-    if string == "b'":
-        return "f'"
-    if string == "f":
-        return "b"
-    if string == "f'":
-        return "b'"
+    if string == "R":
+        return "L"
+    if string == "R'":
+        return "L'"
+    if string == "L":
+        return "R"
+    if string == "L'":
+        return "R'"
+    if string == "D":
+        return "D"
+    if string == "D'":
+        return "D'"
+    if string == "U":
+        return "U"
+    if string == "U'":
+        return "U'"
+    if string == "B":
+        return "F"
+    if string == "B'":
+        return "F'"
+    if string == "F":
+        return "B"
+    if string == "F'":
+        return "B'"
 
 def translate4(string):
-    if string == "r":
-        return "b"
-    if string == "r'":
-        return "b'"
-    if string == "l":
-        return "f"
-    if string == "l'":
-        return "f'"
-    if string == "d":
-        return "d"
-    if string == "d'":
-        return "d'"
-    if string == "u":
-        return "u"
-    if string == "u'":
-        return "u'"
-    if string == "b":
-        return "l"
-    if string == "b'":
-        return "l'"
-    if string == "f":
-        return "r"
-    if string == "f'":
-        return "r'"
+    if string == "R":
+        return "B"
+    if string == "R'":
+        return "B'"
+    if string == "L":
+        return "F"
+    if string == "L'":
+        return "F'"
+    if string == "D":
+        return "D"
+    if string == "D'":
+        return "D'"
+    if string == "U":
+        return "U"
+    if string == "U'":
+        return "U'"
+    if string == "B":
+        return "L"
+    if string == "B'":
+        return "L'"
+    if string == "F":
+        return "R"
+    if string == "F'":
+        return "R'"
 def translate5(string):
-    if string == "r":
-        return "u"
-    if string == "r'":
-        return "u'"
-    if string == "l":
-        return "d"
-    if string == "l'":
-        return "d'"
-    if string == "d":
-        return "b"
-    if string == "d'":
-        return "b'"
-    if string == "u":
-        return "f"
-    if string == "u'":
-        return "f'"
-    if string == "b":
-        return "l"
-    if string == "b'":
-        return "l'"
-    if string == "f":
-        return "r"
-    if string == "f'":
-        return "r'"
+    if string == "R":
+        return "U"
+    if string == "R'":
+        return "U'"
+    if string == "L":
+        return "D"
+    if string == "L'":
+        return "D'"
+    if string == "D":
+        return "B"
+    if string == "D'":
+        return "B'"
+    if string == "U":
+        return "F"
+    if string == "U'":
+        return "F'"
+    if string == "B":
+        return "L"
+    if string == "B'":
+        return "L'"
+    if string == "F":
+        return "R"
+    if string == "F'":
+        return "R'"
 def translate6(string):
-    if string == "r":
-        return "u"
-    if string == "r'":
-        return "u'"
-    if string == "l":
-        return "d"
-    if string == "l'":
-        return "d'"
-    if string == "d":
-        return "r"
-    if string == "d'":
-        return "r'"
-    if string == "u":
-        return "l"
-    if string == "u'":
-        return "l'"
-    if string == "b":
-        return "b"
-    if string == "b'":
-        return "b'"
-    if string == "f":
-        return "f"
-    if string == "f":
-        return "f'"
+    if string == "R":
+        return "U"
+    if string == "R'":
+        return "U'"
+    if string == "L":
+        return "D"
+    if string == "L'":
+        return "D'"
+    if string == "D":
+        return "R"
+    if string == "D'":
+        return "R'"
+    if string == "U":
+        return "L"
+    if string == "U'":
+        return "L'"
+    if string == "B":
+        return "B"
+    if string == "B'":
+        return "B'"
+    if string == "F":
+        return "F"
+    if string == "F'":
+        return "F'"
 def translate7(string):
-    if string == "r":
-        return "u"
-    if string == "r'":
-        return "u'"
-    if string == "l":
-        return "d"
-    if string == "l'":
-        return "d'"
-    if string == "d":
-        return "f"
-    if string == "d'":
-        return "f'"
-    if string == "u":
-        return "b"
-    if string == "u'":
-        return "b'"
-    if string == "b":
-        return "r"
-    if string == "b'":
-        return "r'"
-    if string == "f":
-        return "l"
-    if string == "f":
-        return "l'"
+    if string == "R":
+        return "U"
+    if string == "R'":
+        return "U'"
+    if string == "L":
+        return "D"
+    if string == "L'":
+        return "D'"
+    if string == "D":
+        return "F"
+    if string == "D'":
+        return "F'"
+    if string == "U":
+        return "B"
+    if string == "U'":
+        return "B'"
+    if string == "B":
+        return "R"
+    if string == "B'":
+        return "R'"
+    if string == "F":
+        return "L"
+    if string == "F'":
+        return "L'"
 def translate8(string):
-    if string == "r":
-        return "u"
-    if string == "r'":
-        return "u'"
-    if string == "l":
-        return "d"
-    if string == "l'":
-        return "d'"
-    if string == "d":
-        return "l"
-    if string == "d'":
-        return "l'"
-    if string == "u":
-        return "r"
-    if string == "u'":
-        return "r'"
-    if string == "b":
-        return "f"
-    if string == "b'":
-        return "f'"
-    if string == "f":
-        return "b"
-    if string == "f":
-        return "b'" 
-    
+    if string == "R":
+        return "U"
+    if string == "R'":
+        return "U'"
+    if string == "L":
+        return "D"
+    if string == "L'":
+        return "D'"
+    if string == "D":
+        return "L"
+    if string == "D'":
+        return "L'"
+    if string == "U":
+        return "R"
+    if string == "U'":
+        return "R'"
+    if string == "B":
+        return "F"
+    if string == "B'":
+        return "F'"
+    if string == "F":
+        return "B"
+    if string == "F'":
+        return "B'" 
+
+def translate9( string ):
+    if( string == "R" ):
+        return "B"     
+    if( string == "R'"):
+        return "B'"
+    if( string == "L" ):
+        return "F"
+    if( string == "L'"):
+        return "F'"
+    if( string == "U" ):
+        return "D"
+    if( string == "U'" ):
+        return "D'"
+    if( string == "D" ):
+        return "U"
+    if( string == "D'" ):
+        return "U'"
+    if( string == "F" ):
+        return "L"
+    if( string== "F'" ):
+        return "L'"
+    if( string == "B" ):
+        return "R"
+    if( string == "B'" ):
+        return "R'"
+
+def translate10( string ):
+    if( string == "R" ):
+        return "R"     
+    if( string == "R'"):
+        return "R'"
+    if( string == "L" ):
+        return "L"
+    if( string == "L'"):
+        return "L'"
+    if( string == "U" ):
+        return "D"
+    if( string == "U'" ):
+        return "D'"
+    if( string == "D" ):
+        return "U"
+    if( string == "D'" ):
+        return "U'"
+    if( string == "F" ):
+        return "B"
+    if( string == "F'" ):
+        return "B'"
+    if( string == "B" ):
+        return "F"
+    if( string == "B'" ):
+        return "F'"
+
+def translate11( string ):
+    if( string == "R" ):
+        return "F"     
+    if( string == "R'"):
+        return "F'"
+    if( string == "L" ):
+        return "B"
+    if( string == "L'"):
+        return "B'"
+    if( string == "U" ):
+        return "D"
+    if( string == "U'" ):
+        return "D'"
+    if( string == "D" ):
+        return "U"
+    if( string == "D'" ):
+        return "U'"
+    if( string == "F" ):
+        return "R"
+    if( string == "F'" ):
+        return "R'"
+    if( string == "B" ):
+        return "L"
+    if( string == "B'" ):
+        return "L'"
+
+def translate12( string ):
+    if( string == "R" ):
+        return "L"     
+    if( string == "R'"):
+        return "L'"
+    if( string == "L" ):
+        return "R"
+    if( string == "L'"):
+        return "R'"
+    if( string == "U" ):
+        return "D"
+    if( string == "U'" ):
+        return "D'"
+    if( string == "D" ):
+        return "U"
+    if( string == "D'" ):
+        return "U'"
+    if( string == "F" ):
+        return "F"
+    if( string == "F'" ):
+        return "F"
+    if( string == "B" ):
+        return "B"
+    if( string == "B'" ):
+        return "B'"
+
+
+def translate13( string ):
+    if( string == "R" ):
+        return "D"     
+    if( string == "R'"):
+        return "D'"
+    if( string == "L" ):
+        return "U"
+    if( string == "L'"):
+        return "U'"
+    if( string == "U" ):
+        return "F"
+    if( string == "U'" ):
+        return "F'"
+    if( string == "D" ):
+        return "B"
+    if( string == "D'" ):
+        return "B'"
+    if( string == "F" ):
+        return "L"
+    if( string == "F'" ):
+        return "L'"
+    if( string == "B" ):
+        return "R"
+    if( string == "B'" ):
+        return "R'"
+
+def translate14( string ):
+    if( string == "R" ):
+        return "D"     
+    if( string == "R'"):
+        return "D'"
+    if( string == "L" ):
+        return "U"
+    if( string == "L'"):
+        return "U'"
+    if( string == "U" ):
+        return "L"
+    if( string == "U'" ):
+        return "L'"
+    if( string == "D" ):
+        return "R"
+    if( string == "D'" ):
+        return "R'"
+    if( string == "F" ):
+        return "B"
+    if( string == "F'" ):
+        return "B'"
+    if( string == "B" ):
+        return "F"
+    if( string == "B'" ):
+        return "F'"
+
+
+def translate15( string ):
+    if( string == "R" ):
+        return "D"     
+    if( string == "R'"):
+        return "D'"
+    if( string == "L" ):
+        return "U"
+    if( string == "L'"):
+        return "U'"
+    if( string == "U" ):
+        return "B"
+    if( string == "U'" ):
+        return "B'"
+    if( string == "D" ):
+        return "F"
+    if( string == "D'" ):
+        return "F'"
+    if( string == "F" ):
+        return "R"
+    if( string == "F'" ):
+        return "R'"
+    if( string == "B" ):
+        return "L"
+    if( string == "B'" ):
+        return "L'"
+
+def translate16( string ):
+    if( string == "R" ):
+        return "D"     
+    if( string == "R'"):
+        return "D'"
+    if( string == "L" ):
+        return "U"
+    if( string == "L'"):
+        return "U'"
+    if( string == "U" ):
+        return "R"
+    if( string == "U'" ):
+        return "R'"
+    if( string == "D" ):
+        return "L"
+    if( string == "D'" ):
+        return "L'"
+    if( string == "F" ):
+        return "F"
+    if( string == "F'" ):
+        return "F'"
+    if( string == "B" ):
+        return "B"
+    if( string == "B'" ):
+        return "B'"
+
 def translate17( move ):
 	if move == "U":
 		return "F"
