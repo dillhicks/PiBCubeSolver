@@ -2,24 +2,58 @@ import kociemba
 import orientation
 import numpy as np
 import linkedList
-string = kociemba.solve( "FFFLUUBBLFRRURDULLDDDUFLBFLRRFDDBBBBRDRRLFLFUULDRBBDUU" )
-#state = np.copy(orientation.orient1)
-#newNode = linkedList.Node("L",state)
-#linkList = linkedList.linkedList()
-#linkList.append(newNode)
-#newNode = linkedList.Node("R",state)
-#linkList.append(newNode)
-#iterator = linkedList.iterator(linkList)
+# Array is an array of 2D arrays assosciated with each face
+#up,right,front,down,left,back
 
-#print(iterator.getTurn())
-#print((iterator.getState())[2])
-#print(iterator.next())
-#print(iterator.getTurn())
-#print((iterator.getState())[2])
-#state2 = np.copy(state)
-#orientation.swapsLeft(state2)
-#iterator.updateState(state2)
-#print((iterator.getState())[2])
+def translateK(color):
+    if color == "r":
+        return "F"
+    if color == "y":
+        return "U"
+    if color == "b":
+        return "L"
+    if color == "g":
+        return "R"
+    if color == "o":
+        return "B"
+    if color == "w":
+        return "D"
+def arrayToKociemba(array):
+    string = ""
+    i = 0
+    face = None
+    while i < 6:
+        if i == 0:
+            #up
+            face = array[0]
+        elif i == 1:
+            #right
+            face = array[3]
+        elif i == 2:
+            #front
+            face = array[1]
+        elif i == 3:
+            #down
+            face = array[5]
+        elif i == 4:
+            #left
+            face = array[2]
+        else:
+            face = array[4]
+        row = 0
+        col = 0
+        num = 0
+        while num < 9:
+            if col == 3:
+                row += 1
+                col = 0
+            string += translateK(face[row][col])
+            num += 1
+            col += 1
+    return string
+            
+            
+string = kociemba.solve( "FFFLUUBBLFRRURDULLDDDUFLBFLRRFDDBBBBRDRRLFLFUULDRBBDUU" )
 print()
 print("The Instructions on a Fixed Orientation:")
 print(string)
