@@ -1,0 +1,28 @@
+functions needed:
+
+servos:
+right grab
+right ungrab
+left grab
+left ungrab
+
+steppers:
+right ccw
+right cw
+left cw
+left ccw
+
+scan:
+scan cube colors
+
+UFDRLB
+
+red right top
+white left top 
+
+white top
+red front 
+orange back 
+blue left 
+green right 
+yellow down 
