@@ -1,9 +1,26 @@
-import kociemba
-import orientation
-import numpy as np
+import cv2
+import movement as mv
+import scan 
+import kociemba 
+import orientation as ori
 import linkedList
-# Array is an array of 2D arrays assosciated with each face
-#up,right,front,down,left,back
+
+
+cube = []
+
+def get_Orientation(face):
+    if face[1][1] == 'W':
+        cube[0] = face;
+    else if face[1][1] == 'G':
+        cube[1] = face;
+    else if face[1][1] == 'O':
+        cube[2] = face;
+    else if face[1][1] == 'B':
+        cube[3] = face;
+    else if face[1][1] == 'R':
+        cube[4] = face;
+    else if face[1][1] == 'Y':
+        cube[5] = face;
 
 def translateK(color):
     if color == "r":
@@ -18,6 +35,7 @@ def translateK(color):
         return "B"
     if color == "w":
         return "D"
+
 def arrayToKociemba(array):
     string = ""
     i = 0
@@ -51,20 +69,34 @@ def arrayToKociemba(array):
             num += 1
             col += 1
     return string
-            
-            
-string = kociemba.solve( "FFFLUUBBLFRRURDULLDDDUFLBFLRRFDDBBBBRDRRLFLFUULDRBBDUU" )
-print()
-print("The Instructions on a Fixed Orientation:")
-print(string)
-print()
-instrs = orientation.translateTurns(string)
-iterator = linkedList.iterator(instrs)
-stringI = ""
-while 1:
-    turn = iterator.getTurn()
-    stringI += turn + " "
-    if not iterator.next():
-        break
-print("The Instructions Accounting for Changing Orientation:")
-print(stringI)
+
+if __name__ == "__main__":
+    f1, f2 = scan.init_scan()
+    mv.init_turn()
+    f3, f4 = scan.init_scan()
+    mv.init_turn()
+    f5, f6 = scan.init_scan()
+    mv.init_turn()
+    get_Orientation(f1)
+    get_Orientation(f2)
+    get_Orientation(f3)
+    get_Orientation(f4)
+    get_Orientation(f5)
+    get_Orientation(f6)
+
+    placement = arrayToKociemba(cube)
+    moves = kociemba.solve(placement)
+    translateMoves = ori.translateTurns(moves)
+    iterator = linkedList.iterator(instrs)
+    stringI = ""
+    while 1:
+        turn = iterator.getTurn()
+        stringI += turn + " "
+        if not iterator.next():
+            break
+    print(stringI)
+
+
+
+
+
