@@ -1,32 +1,52 @@
 import ##
 import ##
 
-
-
-
 #TODO: fininsh servo and stepper funtions
-def right_grab():
+def right_grab(grabbed):
+	if grabbed == true:
+		continue
+	else:
+
 	return
 
-def right_ungrab():
+def right_ungrab(grabbed):
+	if grabbed == false:
+		continue
+	else:
+
 	return
 
-def left_grab():
+def left_grab(grabbed):
+	if grabbed == true:
+		continue
+	else:
 	return
 
-def left_ungrab)():
+def left_ungrab(grabbed):
+	if grabbed == false:
+		continue
+	else:
+
 	return
 
-def right_ccw():
+def right_ccw(turns):
+	for turn in range(turns):
+
 	return
 
-def right_cw():
+def right_cw(turns):
+	for turn in range(turns):
+
 	return
 
-def left_ccw():
+def left_ccw(turns):
+	for turn in range(turns):
+
 	return
 
-def left_cw();
+def left_cw(turns):
+	for turn in range(turns):
+
 	return
 
 def init_turn():
@@ -35,15 +55,3 @@ def init_turn():
 	right_ungrab()
 	left_ccw()
 	right_grab()
-
-
-
-
-
-
-
-
-
-
-
-
