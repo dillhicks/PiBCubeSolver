@@ -413,6 +413,19 @@ def translate17( move ):
 		return "L"
 	if move == "R":
 		return "R"
+	#two turns
+	if move == "U2":
+		return "F2"
+	if move == "D2":
+		return "B2"
+	if move == "F2":
+		return "D2"
+	if move == "B2":
+		return "U2"
+	if move == "L2":
+		return "L2"
+	if move == "R2":
+		return "R2"
 	#counter
 	if move == "U'":
 		return "F'"
@@ -441,6 +454,19 @@ def translate18( move ):
 		return "B"
 	if move == "R":
 		return "U"
+	#two turns
+	if move == "U2":
+		return "F2"
+	if move == "D2":
+		return "B2"
+	if move == "F2":
+		return "R2"
+	if move == "B2":
+		return "L2"
+	if move == "L2":
+		return "B2"
+	if move == "R2":
+		return "U2"
 	#counter
 	if move == "U'":
 		return "F'"
@@ -469,6 +495,19 @@ def translate19( move ):
 		return "R"
 	if move == "R":
 		return "L"
+	#two turns
+	if move == "U2":
+		return "F2"
+	if move == "D2":
+		return "B2"
+	if move == "F2":
+		return "U2"
+	if move == "B2":
+		return "D2"
+	if move == "L2":
+		return "R2"
+	if move == "R2":
+		return "L2"
 	#counter
 	if move == "U'":
 		return "F'"
@@ -497,6 +536,19 @@ def translate20( move ):
 		return "U"
 	if move == "R":
 		return "D"
+	#two turns
+	if move == "U2":
+		return "F2"
+	if move == "D2":
+		return "B2"
+	if move == "F2":
+		return "L2"
+	if move == "B2":
+		return "R2"
+	if move == "L2":
+		return "U2"
+	if move == "R2":
+		return "D2"
 	#counter
 	if move == "U'":
 		return "F'"
@@ -525,6 +577,19 @@ def translate21( move ):
 		return "U"
 	if move == "R":
 		return "D"
+	#two turns
+	if move == "U2":
+		return "F2"
+	if move == "D2":
+		return "B2"
+	if move == "F2":
+		return "L2"
+	if move == "B2":
+		return "R2"
+	if move == "L2":
+		return "U2"
+	if move == "R2":
+		return "D2"
 	#counter
 	if move == "U'":
 		return "F'"
@@ -553,6 +618,19 @@ def translate22( move ):
 		return "L"
 	if move == "R":
 		return "R"
+	#two turns
+	if move == "U2":
+		return "B2"
+	if move == "D2":
+		return "F2"
+	if move == "F2":
+		return "U2"
+	if move == "B2":
+		return "D2"
+	if move == "L2":
+		return "L2"
+	if move == "R2":
+		return "R2"
 	#counter
 	if move == "U'":
 		return "B'"
@@ -582,6 +660,19 @@ def translate23( move ):
 		return "U"
 	if move == "R":
 		return "D"
+	#two moves
+	if move == "U2":
+		return "B2"
+	if move == "D2":
+		return "F2"
+	if move == "F2":
+		return "R2"
+	if move == "B2":
+		return "L2"
+	if move == "L2":
+		return "U2"
+	if move == "R2":
+		return "D2"
 	#counter
 	if move == "U'":
 		return "B'"
@@ -611,6 +702,19 @@ def translate24( move ):
 		return "R"
 	if move == "R":
 		return "L"
+	#two turns
+	if move == "U2":
+		return "B2"
+	if move == "D2":
+		return "F2"
+	if move == "F2":
+		return "D2"
+	if move == "B2":
+		return "U2"
+	if move == "L2":
+		return "R2"
+	if move == "R2":
+		return "L2"
 	#counter
 	if move == "U'":
 		return "B'"
@@ -624,4 +728,3 @@ def translate24( move ):
 		return "L'"
 	if move == "R'":
 		return "R'"
-
