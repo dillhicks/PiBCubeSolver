@@ -165,6 +165,9 @@ def translateTurns(turns):
             if turns[i+1:i+2] == "'":
                 rotation = turns[i:i+2]
                 i += 3
+            elif turns[i+1:+2] == "2":
+                rotation = turns[i:i+2]
+                i += 3
             else:
                 rotation = turns[i:i+1]
                 i += 2

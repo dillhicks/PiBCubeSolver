@@ -3,28 +3,40 @@ def translate1(string):
 def translate2(string):
     if string == "R":
         return "F"
+    if string == "R2":
+        return "F2"
     if string == "R'":
         return "F'"
     if string == "L":
         return "B"
     if string == "L'":
         return "B'"
+    if string == "L2":
+        return "B2"
     if string == "D":
         return "D"
     if string == "D'":
         return "D'"
+    if string == "D2":
+        return "D2"
     if string == "U":
         return "U"
     if string == "U'":
         return "U'"
+    if string == "U2":
+        return "U2"
     if string == "F":
         return "L"
     if string == "F'":
         return "L'"
+    if string == "F2":
+        return "L2"
     if string == "B":
         return "R"
     if string == "B'":
         return "R'"
+    if string == "B2":
+        return "R2"
 
 def translate3(string):
     if string == "R":
