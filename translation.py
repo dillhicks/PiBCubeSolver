@@ -195,104 +195,152 @@ def translate9( string ):
         return "B"     
     if( string == "R'"):
         return "B'"
+    if( string == "R2"):
+        return "B2"
     if( string == "L" ):
         return "F"
     if( string == "L'"):
         return "F'"
+    if( string == "L2"):
+        return "F2"
     if( string == "U" ):
         return "D"
     if( string == "U'" ):
         return "D'"
+    if( string == "U2" ):
+        return "D2" 
     if( string == "D" ):
         return "U"
     if( string == "D'" ):
         return "U'"
+    if( string == "D2" ):
+        return "U2"
     if( string == "F" ):
         return "L"
-    if( string== "F'" ):
+    if( string == "F'" ):
         return "L'"
+    if( string == "F2" ):
+        return "F2"
     if( string == "B" ):
         return "R"
     if( string == "B'" ):
         return "R'"
+    if( string == "B2" ):
+        return "R2"
 
 def translate10( string ):
     if( string == "R" ):
         return "R"     
     if( string == "R'"):
         return "R'"
+    if( string == "R2"):
+        return "R2"
     if( string == "L" ):
         return "L"
     if( string == "L'"):
         return "L'"
+    if( string == "L2"):
+        return "L2"
     if( string == "U" ):
         return "D"
     if( string == "U'" ):
         return "D'"
+    if( string == "U2"):
+        return "D2"
     if( string == "D" ):
         return "U"
     if( string == "D'" ):
         return "U'"
+    if( string == "D2"):
+        return "U2"
     if( string == "F" ):
         return "B"
     if( string == "F'" ):
         return "B'"
+    if( string == "F2"):
+        return "B2"
     if( string == "B" ):
         return "F"
     if( string == "B'" ):
         return "F'"
+    if( string == "B2"):
+        return "F2"
 
 def translate11( string ):
     if( string == "R" ):
         return "F"     
     if( string == "R'"):
         return "F'"
+    if( string == "R2"):
+        return "F2"
     if( string == "L" ):
         return "B"
     if( string == "L'"):
         return "B'"
+    if( string == "L2"):
+        return "B2"
     if( string == "U" ):
         return "D"
     if( string == "U'" ):
         return "D'"
+    if( string == "U2"):
+        return "D2"
     if( string == "D" ):
         return "U"
     if( string == "D'" ):
         return "U'"
+    if( string == "D2"):
+        return "U2"
     if( string == "F" ):
         return "R"
     if( string == "F'" ):
         return "R'"
+    if( string == "F2"):
+        return "R2"
     if( string == "B" ):
         return "L"
     if( string == "B'" ):
         return "L'"
+    if( string == "B2"):
+        return "L2"
 
 def translate12( string ):
     if( string == "R" ):
         return "L"     
     if( string == "R'"):
         return "L'"
+    if( string == "R2"):
+        return "L2"
     if( string == "L" ):
         return "R"
     if( string == "L'"):
         return "R'"
+    if( string == "L2"):
+        return "R2"
     if( string == "U" ):
         return "D"
     if( string == "U'" ):
         return "D'"
+    if( string == "U2"):
+        return "D2"
     if( string == "D" ):
         return "U"
     if( string == "D'" ):
         return "U'"
+    if( string == "D2"):
+        return "U2"
     if( string == "F" ):
         return "F"
     if( string == "F'" ):
         return "F"
+    if( string == "F2"):
+        return "F2"
     if( string == "B" ):
         return "B"
     if( string == "B'" ):
         return "B'"
+    if( string == "B2"):
+        return "B2"
 
 
 def translate13( string ):
@@ -300,52 +348,76 @@ def translate13( string ):
         return "D"     
     if( string == "R'"):
         return "D'"
+    if( string == "R2"):
+        return "D2"
     if( string == "L" ):
         return "U"
     if( string == "L'"):
         return "U'"
+    if( string == "L2"):
+        return "U2"
     if( string == "U" ):
         return "F"
     if( string == "U'" ):
         return "F'"
+    if( string == "U2"):
+        return "F2"
     if( string == "D" ):
         return "B"
     if( string == "D'" ):
         return "B'"
+    if( string == "D2"):
+        return "B2"
     if( string == "F" ):
         return "L"
     if( string == "F'" ):
         return "L'"
+    if( string == "F2"):
+        return "L2"
     if( string == "B" ):
         return "R"
     if( string == "B'" ):
         return "R'"
+    if( string == "B2"):
+        return "R2"
 
 def translate14( string ):
     if( string == "R" ):
         return "D"     
     if( string == "R'"):
         return "D'"
+    if( string == "R2"):
+        return "D2"
     if( string == "L" ):
         return "U"
     if( string == "L'"):
         return "U'"
+    if( string == "L2"):
+        return "U2"
     if( string == "U" ):
         return "L"
     if( string == "U'" ):
         return "L'"
+    if( string == "U2"):
+        return "L2"
     if( string == "D" ):
         return "R"
     if( string == "D'" ):
         return "R'"
+    if( string == "D2"):
+        return "R2"
     if( string == "F" ):
         return "B"
     if( string == "F'" ):
         return "B'"
+    if( string == "F2"):
+        return "B2"
     if( string == "B" ):
         return "F"
     if( string == "B'" ):
         return "F'"
+    if( string == "B2"):
+        return "F2"
 
 
 def translate15( string ):
@@ -353,52 +425,76 @@ def translate15( string ):
         return "D"     
     if( string == "R'"):
         return "D'"
+    if( string == "R2"):
+        return "D2"
     if( string == "L" ):
         return "U"
     if( string == "L'"):
         return "U'"
+    if( string == "L2"):
+        return "U2"
     if( string == "U" ):
         return "B"
     if( string == "U'" ):
         return "B'"
+    if( string == "U2"):
+        return "B2"
     if( string == "D" ):
         return "F"
     if( string == "D'" ):
         return "F'"
+    if( string == "D2"):
+        return "F2"
     if( string == "F" ):
         return "R"
     if( string == "F'" ):
         return "R'"
+    if( string == "F2"):
+        return "R2"
     if( string == "B" ):
         return "L"
     if( string == "B'" ):
         return "L'"
+    if( string == "B2"):
+        return "L2"
 
 def translate16( string ):
     if( string == "R" ):
         return "D"     
     if( string == "R'"):
         return "D'"
+    if( string == "R2"):
+        return "D2"
     if( string == "L" ):
         return "U"
     if( string == "L'"):
         return "U'"
+    if( string == "L2"):
+        return "U2"
     if( string == "U" ):
         return "R"
     if( string == "U'" ):
         return "R'"
+    if( string == "U2"):
+        return "R2"
     if( string == "D" ):
         return "L"
     if( string == "D'" ):
         return "L'"
+    if( string == "D2"):
+        return "L2"
     if( string == "F" ):
         return "F"
     if( string == "F'" ):
         return "F'"
+    if( string == "F2"):
+        return "F2"
     if( string == "B" ):
         return "B"
     if( string == "B'" ):
         return "B'"
+    if( string == "B2"):
+        return "B2"
 
 def translate17( move ):
 	if move == "U":
